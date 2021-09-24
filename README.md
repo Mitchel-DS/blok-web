@@ -79,7 +79,7 @@ store
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+de goede afmetingen van alle elementen uitzoeken was lastiger dan ik dacht. om deze dan ook nog eens goed overal neer te zetten was ook nog eens een klus. elk element is anders, dus er moet veel unieke styling worden toegevoegd (dit kost nou eenmaal tijd, niet perse moeilijk tho).
 
 
 ### Agenda voor meeting
@@ -95,10 +95,11 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- comments neerzetten in de css waar verwarring kan onstaan. bijvoorbeeld; bij de verschillende section waar ik nth heb gebruikt.
+- letten op het gebruiken van px..
+- meer content zoals foto's.
+- voor de rest nette html en css.
+
 
 </details>
 
