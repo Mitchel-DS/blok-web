@@ -113,7 +113,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+het accuraat positioneren van alle elementen was nog wel heel moeilijk. daarnaast ook nog het toevoegen van de background images op elke unieke section.
 
 
 ### Agenda voor meeting
@@ -129,10 +129,10 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- footer heeft veel sections, dit kan beter worden gedaan in een article.
+- de class 'location' nog wat te onduidelijk. class names mogen gewoon langer zijn als ze maar duidelijk zijn.
+- beginnen met javascript.
+- zorgen dat de eerste pagina helemaal af is.
 
 </details>
 
@@ -147,6 +147,11 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen:
+
+- bril: colorblind color #0779P, bijna geen verschil, maar overgang van wit op grijs was bijna niet op te merken.
+- bril: blur, bijna niks. niks is te zien of te lezen. oplossing: ??
+- bril: hemifield loss, bijna geen verschil, alleen nu met een zwarte vlek.
+- bril: 
 
 #### Titel eerste bevinding
 Hier korte omschrijving (met indien nodig een afbeelding)
