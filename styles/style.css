@@ -3,15 +3,20 @@
   box-sizing:border-box;  
 }
 
-/* root met wat kleuren die apple het meeste gebruikt + more */
+/* root met default kleuren */
 :root {
   --main-color: #fff;
+  --accent-color: #36363a;
+
   --background-color: #000;
-  --background-color-marker: darkred; 
-  --background-color-nav: #1D1D1F;
-  --background-color-welkom: #f5f5f7;
-  --background-color-storewelkom: #06c;
+  --background-color-nav: #1d1d1f;
+  --background-color-welcome: #f5f5f7;
+  --background-color-storewelcome: #06c;
+  --background-color-searchbar: #1d1d1f;
+  --background-color-searchbar-text: #6e6e73;
+
   --color-link: #06c;
+  --color-link-active: #868686;
   --color-footer-text: #86868b;
   --color-special-text: #fec2eb;
 }
@@ -27,7 +32,6 @@ body {
 
   /* letter spacing van de apple site overgenomen */
   letter-spacing: -.022em;
-  color: #1D1D1F;
   font-style: normal;
   line-height: 1.5;
 }
@@ -38,18 +42,23 @@ h2, h3, p {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 500;
 }
 
 h3 {
-  font-size: 1em;
+  font-size: .95em;
   font-weight: 400;
 }
 
 p {
   padding: .5em 1.5em;
   font-size: .7em;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
 }
 
 /* begin header styling */
@@ -68,23 +77,34 @@ header nav {
   /* hier blijft de nav tegen de boven kant aan */
   top: 0;
   overflow: hidden;
-
   background-color: var(--background-color-nav);
-
-  /* de nav is iets doorzichtig */
-  opacity: .98;
-
-
+  
   transition: .4s;
+}
+
+header nav img {
+  width: .9em   ;
 }
 
 header nav ul {
   margin: 0;
   padding: 1em;
+  width: 100%;
+  font-size: .85em;
 }
 
-header nav img {
-  width: .9em   ;
+header nav ul li {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  border-bottom: .05em solid var(--accent-color);
+}
+
+header nav ul a {
+  color: var(--main-color);
+}
+
+header nav ul a.active {
+  color: var(--color-link-active);
 }
 
 nav.navigation-menu-hidden {
@@ -92,24 +112,66 @@ nav.navigation-menu-hidden {
 	left:0;
 	right:0;
 	top:0;
-	
+  padding-top: 1em;
 	transform:translateY(-100%);
-	
 	transition:.5s;
+  background-color: #000;
 }
 
 nav.navigation-menu {
-  transform:translateY(21%);
+  transform:translateY(7.2%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+nav.navigation-menu input {
+  width: 100%;
+  height: 2.1em;
+  background-color: var(--background-color-searchbar);
+  border-radius: 0.4em;
+  border: none;
+  outline: none;
+
+  font-size: ;
+}
+
+nav.navigation-menu input::placeholder {
+  color: var(--background-color-searchbar-text);
 }
 
 nav.navigation-menu ul li {
   color: white;
+}
+
+nav.navigation-menu ul li a {
+  text-decoration: none;
+}
+
+nav.navigation-cart-hidden {
+  position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	transform:translateY(-100%);
+	transition:.5s;
+}
+
+nav.navigation-cart {
+  transform:translateY(31%);
+  background: #fff;
+}
+
+nav.navigation-cart ul li {
+  color: var(--color-link);
   list-style: none;
   text-decoration: none;
 }
 
-nav.navigation-menu ul li a {
-  color: white;
+nav.navigation-cart ul li a {
+  color: var(--color-link);
   list-style: none;
   text-decoration: none;
 }
@@ -123,6 +185,7 @@ main {
 main section {
   height: 27.4em;
   padding: .5em;
+  margin-bottom: 1.5em;
 }
 
 /* styling voor alle links in de sections, NIET er buiten */
@@ -136,16 +199,15 @@ main section a {
 /* styling voor de unieke welkom message aan de bovenkant */
 main section:nth-of-type(1) {
   height: 0%;
-  background-color: var(--background-color-welkom);
+  background-color: var(--background-color-welcome);
+  margin-bottom: 0;
 }
 
 main section:nth-of-type(3) {
-  background-color: var(--background-color-marker);
   background-image: url("../images/iPhone13_section2.jpeg");
   background-size: 200% 150%;
   background-position: center;
   color: var(--main-color);
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,12 +221,9 @@ main section:nth-of-type(3) h3 {
 main section:nth-of-type(4) {
   background-image: url("../images/watch7.jpeg");
   background-size: 100% 100%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  margin-top: 1.5em;
 }
 
 main section:nth-of-type(4) img {
@@ -177,7 +236,7 @@ main section:nth-of-type(4) p {
 }
 
 main section:nth-of-type(5) {
-  background-color: var(--background-color-welkom);
+  background-color: var(--background-color-welcome);
 }
 
 /* specifieke styling voor de paginas */
@@ -189,7 +248,7 @@ main.home section:nth-of-type(2) {
 
 main.store section:nth-of-type(1) {
   height: 0%;
-  background-color: var(--background-color-storewelkom);
+  background-color: var(--background-color-storewelcome);
 }
 
 main.store section:nth-of-type(1) p {
@@ -211,7 +270,7 @@ main.store section:nth-of-type(2) h2 {
 
 /* begin footer styling */
 footer {
-  background-color: var(--background-color-welkom);
+  background-color: var(--background-color-welcome);
   margin-top: .5em;
 }
 
@@ -245,8 +304,3 @@ footer section a {
   padding: 0 .6em;
   text-decoration: none;
 }
-
-
-
-
-
