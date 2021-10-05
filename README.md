@@ -39,13 +39,13 @@ Responsive
 https://www.apple.com/nl/
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-home
-<img src="images/home-1.png" width="375px" alt="eerste screenshot home">
-<img src="images/home-2.png" width="375px" alt="tweede screenshot home">
-<img src="images/home-3.png" width="375px" alt="derde screenshot home">
+Home
+<img src="images/home-1.png" width="375px" alt="eerste screenshot home">  
+<img src="images/home-2.png" width="375px" alt="tweede screenshot home">  
+<img src="images/home-3.png" width="375px" alt="derde screenshot home">  
 
 #### Screenshot(s) van de tweede pagina (small screen):
-store
+Store
 <img src="images/store-1.png" width="375px" alt="eerste screenshot store">
  
 </details>
