@@ -184,11 +184,11 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+moeite gehad met het houden aan de planning. eigen schuld, dus ik werk nu met de gevolgen. niet genoeg tijd gehad om de site helemaal perfect af te krijgen.
 
 ### Screenshot(s)
 
-hier screenshot(s) van je eindresultaat
+<img src="images/YAMI - Apple.pdf" width="375px" alt="eerste screenshot home">  
 
 </details>
 
@@ -203,8 +203,8 @@ hier screenshot(s) van je eindresultaat
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. https://www.w3schools.com/jsref/met_win_settimeout.asp voor het veranderen van de kleur van de welkom message na een paar seconden.
+2. https://css-irl.info/quick-and-easy-dark-mode-with-css-custom-properties/ voor dark mode door middel van media queries.
+3. https://www.w3schools.com/cssref/pr_pos_overflow.asp voor zijwaardse scroll.
 
 </details>
