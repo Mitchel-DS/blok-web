@@ -21,6 +21,17 @@
   --color-special-text: #fec2eb;
 }
 
+/* poging tot dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: #000;
+    --accent-color: #f5f5f7;
+    --background-color: #fff;
+    --background-color-welcome: #36363a;
+  };
+}
+
+/* algemene styling */
 html, body {
   margin: 0;
   padding: 0;
@@ -77,9 +88,13 @@ header nav {
   /* hier blijft de nav tegen de boven kant aan */
   top: 0;
   overflow: hidden;
-  background-color: var(--background-color-nav);
   
   transition: .4s;
+}
+
+/* wanneer het menu uitklapt moet de color matchen met het de nav */
+header nav.navigation {
+  background-color: var(--background-color-nav);
 }
 
 header nav img {
@@ -93,21 +108,18 @@ header nav ul {
   font-size: .85em;
 }
 
-header nav ul li {
-  padding-top: .5em;
-  padding-bottom: .5em;
-  border-bottom: .05em solid var(--accent-color);
-}
-
 header nav ul a {
   color: var(--main-color);
 }
 
+/* aparte kleur voor huidige pagina */
 header nav ul a.active {
   color: var(--color-link-active);
 }
 
-nav.navigation-menu-hidden {
+/* start styling van nav menu */
+/* haalt uitgeklapte menu uit beeld */
+header nav.navigation-menu-hidden {
   position:fixed;
 	left:0;
 	right:0;
@@ -118,8 +130,9 @@ nav.navigation-menu-hidden {
   background-color: #000;
 }
 
-nav.navigation-menu {
-  transform:translateY(7.2%);
+/* brengt uitgeklapte menu terug in beeld */
+header nav.navigation-menu {
+  transform:translateY(6%);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -127,30 +140,42 @@ nav.navigation-menu {
   align-items: flex-start;
 }
 
-nav.navigation-menu input {
+/* styling voor de zoekbalk in uitklap menu */
+header nav.navigation-menu input {
   width: 100%;
   height: 2.1em;
   background-color: var(--background-color-searchbar);
   border-radius: 0.4em;
   border: none;
   outline: none;
-
-  font-size: ;
+  padding-left: 1em;
 }
 
-nav.navigation-menu input::placeholder {
+header nav.navigation-menu input::placeholder {
   color: var(--background-color-searchbar-text);
 }
 
-nav.navigation-menu ul li {
+header nav.navigation-menu ul li {
   color: white;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  border-bottom: .05em solid var(--accent-color);
 }
 
-nav.navigation-menu ul li a {
+header nav.navigation-menu ul li:nth-of-type(8) {
+  border-bottom: none;
+}
+
+header nav.navigation-menu ul li a {
   text-decoration: none;
 }
 
-nav.navigation-cart-hidden {
+header nav.navigation-menu-shown {
+  background-color: var(--background-color);
+}
+
+/* start styling van cart menu */
+header nav.navigation-cart-hidden {
   position:fixed;
 	left:0;
 	right:0;
@@ -159,33 +184,60 @@ nav.navigation-cart-hidden {
 	transition:.5s;
 }
 
-nav.navigation-cart {
-  transform:translateY(31%);
+header nav.navigation-cart {
+  transform:translateY(17%);
   background: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
-nav.navigation-cart ul li {
+header nav.navigation-cart ul li {
   color: var(--color-link);
   list-style: none;
   text-decoration: none;
+  font-size: 0.8em;
+  padding: 1em;
+
+  border-bottom: .05em solid var(--color-link-active);
 }
 
-nav.navigation-cart ul li a {
-  color: var(--color-link);
-  list-style: none;
-  text-decoration: none;
+header nav.navigation-cart ul li:nth-of-type(1) {
+  border-top: .05em solid var(--color-link-active);
+}
+
+header nav.navigation-cart ul li:nth-of-type(5) {
+  border-bottom: none;
+}
+
+header nav.navigation-cart p {
+  padding: 2.5em 0 1.7em;
 }
 
 /* begin main styling */
+/* duwt de content van de main iets naar benenden */
 main {
-  /* duwt de content van de main iets naar benenden */
-  margin-top: 2.9em;
+  margin-top: 2.5em;
+  background-color: var(--main-color);
 }
 
-main section {
+/* main.store.cart-background {
+
+} */
+
+/* apare background color voor store pagina */
+main.store {
+  background-color: var(--background-color-welcome);
+}
+
+main.home section {
   height: 27.4em;
   padding: .5em;
-  margin-bottom: 1.5em;
+  margin-bottom: .5em;
+}
+
+main.store section {
+  padding: .5em;
+  margin-bottom: .5em;
 }
 
 /* styling voor alle links in de sections, NIET er buiten */
@@ -196,14 +248,15 @@ main section a {
   text-align: center;
 }
 
+/* begin main.home syling */
 /* styling voor de unieke welkom message aan de bovenkant */
-main section:nth-of-type(1) {
+main.home section:nth-of-type(1) {
   height: 0%;
   background-color: var(--background-color-welcome);
   margin-bottom: 0;
 }
 
-main section:nth-of-type(3) {
+main.home section:nth-of-type(3) {
   background-image: url("../images/iPhone13_section2.jpeg");
   background-size: 200% 150%;
   background-position: center;
@@ -214,11 +267,11 @@ main section:nth-of-type(3) {
   align-items: center;
 }
 
-main section:nth-of-type(3) h3 {
+main.home section:nth-of-type(3) h3 {
   color: var(--color-special-text);
 }
 
-main section:nth-of-type(4) {
+main.home section:nth-of-type(4) {
   background-image: url("../images/watch7.jpeg");
   background-size: 100% 100%;
   display: flex;
@@ -226,26 +279,33 @@ main section:nth-of-type(4) {
   align-items: center;
 }
 
-main section:nth-of-type(4) img {
+main.home section:nth-of-type(4) img {
   width: 8em;
 }
 
-main section:nth-of-type(4) p {
+main.home section:nth-of-type(4) p {
   font-size: .9em;
   color: var(--color-footer-text);
 }
 
-main section:nth-of-type(5) {
+main.home section:nth-of-type(5) {
   background-color: var(--background-color-welcome);
 }
 
-/* specifieke styling voor de paginas */
 main.home section:nth-of-type(2) {
   background-color: var(--background-color);
   background-image: url("../images/iPhone13_section1.jpeg");
   background-size: 100% 100%;
 }
 
+main.home section div {
+  width: 90%;
+  display: flex;
+  margin: 1em;
+  justify-content: space-evenly;
+}
+
+/* begin home.store styling */
 main.store section:nth-of-type(1) {
   height: 0%;
   background-color: var(--background-color-storewelcome);
@@ -255,17 +315,178 @@ main.store section:nth-of-type(1) p {
   color: var(--main-color);
 }
 
+main.store section:nth-of-type(1) a {
+  color: var(--main-color);
+  font-size: 1em;
+}
+
+main.store section:nth-of-type(2) p {
+  text-align: left;
+}
+
 main.store section:nth-of-type(2) h2 {
   font-size: 1.6em;
+  text-align: left;
+  margin: .8em .8em;
+  line-height: 1.125;
+  letter-spacing: .004em;
+}
+
+main.store section:nth-of-type(2) div:nth-of-type(1), div:nth-of-type(2){
+  display: flex;
+}
+
+main.store section:nth-of-type(2) div img {
+  width: 2em;
+  height: 2em;
+}
+
+main.store section:nth-of-type(2) div p {
+  padding: 0;
+}
+
+main.store section:nth-of-type(2) div a{
+  font-size: .7em;
+  text-align: left;
+}
+
+main.store section:nth-of-type(2) div div {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+
+main.store section:nth-of-type(2) div:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+}
+
+main.store section:nth-of-type(2) div:nth-of-type(3) ul {
+  display: flex;
+  overflow: auto;
+  gap: .5em;
+}
+
+/* webkit inladen om de scrollbar te verstoppen */
+main.store section:nth-of-type(2) div:nth-of-type(3) ul::-webkit-scrollbar {
+  display: none;
+}
+
+main.store section:nth-of-type(2) div:nth-of-type(3) ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main.store section:nth-of-type(2) div:nth-of-type(3) ul li img{
+  width: 5em;
+  height: 3em;
+  margin-bottom: 1em;
+}
+
+main.store section:nth-of-type(3) h2 {
+  font-size: 1.1em;
   text-align: left;
   margin: 1em;
 }
 
-.section-links {
-  width: 90%;
+main.store section:nth-of-type(3) div ul{
   display: flex;
+  overflow: scroll;
+  gap: 1em;
+
+}
+
+main.store section:nth-of-type(3) div ul li{
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+}
+
+main.store section:nth-of-type(3) div ul li img {
+object-fit: contain;
+width: 100%;
+height: 100%;
+}
+
+main.store section:nth-of-type(3) div ul li h3 {
+  font-size: .6em;
+  text-align: left;
+  padding: .5em 1em;
+}
+
+main.store section:nth-of-type(3) div ul li p {
+  text-align: left;
+}
+
+main.store section:nth-of-type(3) div ul li p:nth-of-type(1) {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+main.store section:nth-of-type(3) div ul li p:nth-of-type(2) {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+main.store section:nth-of-type(3) div ul li p:nth-of-type(3) {
+  font-size: .9em;
+}
+
+main.store section:nth-of-type(4) h2 {
+  font-size: 1.1em;
+  text-align: left;
   margin: 1em;
-  justify-content: space-evenly;
+}
+
+main.store section:nth-of-type(4) div ul{
+  display: flex;
+  overflow: scroll;
+  gap: 1em;
+
+}
+
+main.store section:nth-of-type(4) div ul li{
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+}
+
+main.store section:nth-of-type(4) div ul li img {
+object-fit: contain;
+width: 100%;
+height: 100%;
+}
+
+main.store section:nth-of-type(4) div ul li h3 {
+  text-align: left;
+  padding: .5em 1em;
+}
+
+main.store section:nth-of-type(4) div ul li p {
+  text-align: left;
+}
+
+main.store section:nth-of-type(4) div ul li p:nth-of-type(1) {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+main.store section.store-welcome-color {
+  background-color: var(--main-color);
+  transition: .5s;
+}
+
+main.store section.store-welcome-color p {
+  color:var(--background-color);
+}
+
+main.store section.store-welcome-color a {
+  color: var(--color-link);
 }
 
 /* begin footer styling */
@@ -286,8 +507,7 @@ footer section p{
   color: var(--color-footer-text)
 }
 
-/* de styling voor deze p was anders */
-footer section.huidige-locatie p {
+footer section:nth-of-type(10) p {
   font-weight: 700;
 }
 

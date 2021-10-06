@@ -1,25 +1,35 @@
 // JavaScript Document
-console.log("connection gelukt");
+// check for connection with script
+console.log("connection successful.");
 
 var menubutton = document.querySelector(".menu-button");
 var cartbutton = document.querySelector(".cart-button");
-var nav = document.querySelector(".navigation");
+
+var navbar = document.querySelector(".navigation");
 var navigation = document.querySelector(".navigation-menu-hidden");
 var cart = document.querySelector(".navigation-cart-hidden");
+
+var storeWelcome = document.querySelector(".store-welcome");
+
+var main = document.querySelector(".store");
 
 menubutton.addEventListener('click', dropMenu);
 cartbutton.addEventListener('click', dropCart);
 
 function dropMenu(){
-    if(!cart.classList.contains(".navigation-cart")){
         navigation.classList.toggle("navigation-menu");
         cart.classList.remove("navigation-cart");
-    }
+        navbar.classList.toggle("navigation-menu-shown");
 }
 
 function dropCart(){
-    if(!navigation.classList.contains(".navigation-menu")){
         cart.classList.toggle("navigation-cart");
         navigation.classList.remove("navigation-menu");
-    }  
+        main.classList.toggle("cart-background");
 }
+
+function changeWelcomeColor(){
+        storeWelcome.classList.add("store-welcome-color");
+}
+
+setTimeout(changeWelcomeColor, 1000);
