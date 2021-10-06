@@ -134,19 +134,31 @@ Lijst met je bevindingen die in de test naar voren kwamen:
 #### Colorblind color #0779P
 Hier korte omschrijving (met indien nodig een afbeelding)
 
+het contrast tussen mijn welkom bericht en achtergrond was bijna niet te zien met de bril op.
+
 Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+
+oplossing hiervoor kan zijn om een beter contrast te vinden?
 
 
 #### Blur
 Hier korte omschrijving (met indien nodig een afbeelding)
 
+ja, bijna niks te zien. niks is te lezen als je niet dichtbij het scherm was.
+
 Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+
+oplossing is lastig. teksten misschien groter maken, maar kan lelijk zijn qua uiterlijk.
 
 
 #### Hemifield loss
 Hier korte omschrijving (met indien nodig een afbeelding)
 
+zwarte vlakken aan de rand van je ogen. was niet echt erg, meer irritant.
+
 Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+
+geen idee.
 
 
 </details>
@@ -161,17 +173,15 @@ Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbe
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+scrollable lijsten met items was voornamelijk waar mijn aandacht lag.
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
-
+- html comments toevoegen
+- classes beter benamen (al weer)
+- verder met 2de pagina
 </details>
 
 
@@ -184,12 +194,12 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-moeite gehad met het houden aan de planning. eigen schuld, dus ik werk nu met de gevolgen. niet genoeg tijd gehad om de site helemaal perfect af te krijgen.
+moeite gehad met het houden aan de planning. eigen schuld, dus ik werk nu met de gevolgen. niet genoeg tijd gehad om de site helemaal perfect af te krijgen. zo veel mogelijk proberen af te maken.
 
 ### Screenshot(s)
 
-<img src="images/YAMI - Apple.pdf" width="375px" alt="eerste screenshot home">  
-
+<img src="images/IMG_1055.png" width="375px" alt="home_page1">  
+<img src="images/IMG_1056.png" width="375px" alt="home_page2">  <img src="images/IMG_1051.png" width="375px" alt="cart">  <img src="images/IMG_1052.png" width="375px" alt="menu">  <img src="images/IMG_1053.png" width="375px" alt="store_page1">  <img src="images/IMG_1054.png" width="375px" alt="store_page2"> 
 </details>
 
 

@@ -125,7 +125,9 @@ header nav.navigation-menu-hidden {
 	right:0;
 	top:0;
   padding-top: 1em;
-	transform:translateY(-100%);
+
+  /* plaatst het buiten het scherm */
+	transform:translateY(-100%); 
 	transition:.5s;
   background-color: #000;
 }
@@ -151,6 +153,7 @@ header nav.navigation-menu input {
   padding-left: 1em;
 }
 
+/* persuado class om de placeholder te stylen */
 header nav.navigation-menu input::placeholder {
   color: var(--background-color-searchbar-text);
 }
@@ -362,6 +365,7 @@ main.store section:nth-of-type(2) div:nth-of-type(3) {
   flex-direction: column;
 }
 
+/* overflow is om een scroll toe te voegen */
 main.store section:nth-of-type(2) div:nth-of-type(3) ul {
   display: flex;
   overflow: auto;
