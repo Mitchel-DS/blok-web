@@ -22,7 +22,7 @@ Mitchel Staal
 Blauw, met een poging tot Rood.
 
 #### Je focus:
-Responsive
+Surface
  
 </details>
 
