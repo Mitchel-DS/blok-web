@@ -199,11 +199,11 @@ moeite gehad met het houden aan de planning. eigen schuld, dus ik werk nu met de
 ### Screenshot(s)
 
 <img src="images/IMG_1055.PNG" width="375px" alt="home_page1">  
-<img src="images/IMG_1056.png" width="375px" alt="home_page2">  
-<img src="images/IMG_1051.png" width="375px" alt="cart">  
-<img src="images/IMG_1052.png" width="375px" alt="menu">  
-<img src="images/IMG_1053.png" width="375px" alt="store_page1">   
-<img src="images/IMG_1054.png" width="375px" alt="store_page2">  
+<img src="images/IMG_1056.PNG" width="375px" alt="home_page2">  
+<img src="images/IMG_1051.PNG" width="375px" alt="cart">  
+<img src="images/IMG_1052.PNG" width="375px" alt="menu">  
+<img src="images/IMG_1053.PNG" width="375px" alt="store_page1">   
+<img src="images/IMG_1054.PNG" width="375px" alt="store_page2">  
 </details>
 
 
