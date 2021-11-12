@@ -4,6 +4,7 @@ console.log("connection successful.");
 
 var menubutton = document.querySelector(".menu-button");
 var cartbutton = document.querySelector(".cart-button");
+var menubuttonimage = document.querySelector(".menu-button-image");
 
 var navbar = document.querySelector(".navigation");
 var navigation = document.querySelector(".navigation-menu-hidden");
@@ -20,6 +21,12 @@ function dropMenu(){
         navigation.classList.toggle("navigation-menu");
         cart.classList.remove("navigation-cart");
         navbar.classList.toggle("navigation-menu-shown");
+
+        if (navigation.classList.contains("navigation-menu")) {
+                menubuttonimage.src = "images/x.svg";
+        } else {
+                menubuttonimage.src = "images/menu.svg";
+        }
 }
 
 function dropCart(){

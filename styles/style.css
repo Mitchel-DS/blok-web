@@ -7,7 +7,7 @@
 :root {
   --main-color: #fff;
   --accent-color: #36363a;
-
+  
   --background-color: #000;
   --background-color-nav: #1d1d1f;
   --background-color-welcome: #f5f5f7;
@@ -15,21 +15,24 @@
   --background-color-searchbar: #1d1d1f;
   --background-color-searchbar-text: #6e6e73;
 
+  --maintext-color: #000;
+
   --color-link: #06c;
   --color-link-active: #868686;
+  --color-link-focus: #fff;
+  --color-link-hover: #06c;
+
+
   --color-footer-text: #86868b;
   --color-special-text: #fec2eb;
 }
 
 /* poging tot dark mode */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --main-color: #000;
-    --accent-color: #f5f5f7;
-    --background-color: #fff;
-    --background-color-welcome: #36363a;
+
   };
-}
+} */
 
 /* algemene styling */
 html, body {
@@ -147,10 +150,16 @@ header nav.navigation-menu input {
   width: 100%;
   height: 2.1em;
   background-color: var(--background-color-searchbar);
+  color: var(--main-color);
   border-radius: 0.4em;
   border: none;
   outline: none;
   padding-left: 1em;
+}
+
+header nav.navigation-menu input:focus {
+  border: 1px solid;
+  border-color: var(--color-link-hover);
 }
 
 /* persuado class om de placeholder te stylen */
@@ -173,11 +182,25 @@ header nav.navigation-menu ul li a {
   text-decoration: none;
 }
 
+header nav.navigation-menu ul li a:active {
+  color: var(--color-link-active);
+}
+
+header nav.navigation-menu ul li a:focus {
+  color: var(--color-link-focus);
+}
+
+header nav.navigation-menu ul li a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+  
+}
+
 header nav.navigation-menu-shown {
   background-color: var(--background-color);
 }
 
-/* start styling van cart menu */
+/* start styling van menu */
 header nav.navigation-cart-hidden {
   position:fixed;
 	left:0;
@@ -204,6 +227,25 @@ header nav.navigation-cart ul li {
   border-bottom: .05em solid var(--color-link-active);
 }
 
+header nav.navigation-cart ul li a {
+  color: var(--color-link);
+  list-style: none;
+  text-decoration: none;
+}
+
+header nav.navigation-cart ul li a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+header nav.navigation-cart ul li a:focus {
+  color: var(--accent-color);
+}
+
+header nav.navigation-cart ul li a:active {
+  color: var(--color-link-active)
+}
+
 header nav.navigation-cart ul li:nth-of-type(1) {
   border-top: .05em solid var(--color-link-active);
 }
@@ -222,10 +264,6 @@ main {
   margin-top: 2.5em;
   background-color: var(--main-color);
 }
-
-/* main.store.cart-background {
-
-} */
 
 /* apare background color voor store pagina */
 main.store {
@@ -251,7 +289,7 @@ main section a {
   text-align: center;
 }
 
-/* begin main.home syling */
+/* begin main.home styling */
 /* styling voor de unieke welkom message aan de bovenkant */
 main.home section:nth-of-type(1) {
   height: 0%;
@@ -293,6 +331,7 @@ main.home section:nth-of-type(4) p {
 
 main.home section:nth-of-type(5) {
   background-color: var(--background-color-welcome);
+  height: 280px;
 }
 
 main.home section:nth-of-type(2) {
@@ -400,7 +439,7 @@ main.store section:nth-of-type(3) div ul{
   display: flex;
   overflow: scroll;
   gap: 1em;
-
+  height: 450px;
 }
 
 main.store section:nth-of-type(3) div ul li{
@@ -408,22 +447,51 @@ main.store section:nth-of-type(3) div ul li{
   display: flex;
   flex-direction: column;
   border-radius: 18px;
+
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
 }
 
-main.store section:nth-of-type(3) div ul li img {
-object-fit: contain;
-width: 100%;
-height: 100%;
+main.store section:nth-of-type(3) div ul li:nth-of-type(1) {
+  background-image: url('../images/iPhone13Alt.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main.store section:nth-of-type(3) div ul li:nth-of-type(2) {
+  background-image: url('../images/ipad.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main.store section:nth-of-type(3) div ul li:nth-of-type(3) {
+  background-image: url('../images/purple.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main.store section:nth-of-type(3) div ul li:nth-of-type(3) h3 {
+  color: white;
+}
+
+main.store section:nth-of-type(3) div ul li:nth-of-type(3) p {
+  color: white;
 }
 
 main.store section:nth-of-type(3) div ul li h3 {
   font-size: .6em;
   text-align: left;
   padding: .5em 1em;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 main.store section:nth-of-type(3) div ul li p {
   text-align: left;
+  padding: 0;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 main.store section:nth-of-type(3) div ul li p:nth-of-type(1) {
@@ -448,9 +516,18 @@ main.store section:nth-of-type(4) h2 {
 
 main.store section:nth-of-type(4) div ul{
   display: flex;
+
   overflow: scroll;
   gap: 1em;
+  height: 450px;
+}
 
+main.store section:nth-of-type(4) div ul li:nth-of-type(2){
+  height: 240px;
+}
+
+main.store section:nth-of-type(4) div ul li:nth-of-type(3){
+  height: 240px;
 }
 
 main.store section:nth-of-type(4) div ul li{
@@ -458,12 +535,17 @@ main.store section:nth-of-type(4) div ul li{
   display: flex;
   flex-direction: column;
   border-radius: 18px;
+
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
 }
 
 main.store section:nth-of-type(4) div ul li img {
 object-fit: contain;
 width: 100%;
 height: 100%;
+border-radius: 0 0 18px 18px;
 }
 
 main.store section:nth-of-type(4) div ul li h3 {
@@ -473,6 +555,24 @@ main.store section:nth-of-type(4) div ul li h3 {
 
 main.store section:nth-of-type(4) div ul li p {
   text-align: left;
+}
+
+main.store section:nth-of-type(4) div ul li:nth-of-type(1) {
+  background-image: url('../images/specialist2.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main.store section:nth-of-type(4) div ul li:nth-of-type(2) {
+  background-image: url('../images/devices.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main.store section:nth-of-type(4) div ul li:nth-of-type(3) {
+  background-image: url('../images/store.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 main.store section:nth-of-type(4) div ul li p:nth-of-type(1) {

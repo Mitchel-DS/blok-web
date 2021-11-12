@@ -220,5 +220,7 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 1. https://www.w3schools.com/jsref/met_win_settimeout.asp voor het veranderen van de kleur van de welkom message na een paar seconden.
 2. https://css-irl.info/quick-and-easy-dark-mode-with-css-custom-properties/ voor dark mode door middel van media queries.
 3. https://www.w3schools.com/cssref/pr_pos_overflow.asp voor zijwaardse scroll.
+4. https://stackoverflow.com/questions/11722400/programmatically-change-the-src-of-an-img-tag voor het veranderen van het menu icoontje
+5. https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex voor het tabable maken van een inputfield in de navigation.
 
 </details>
